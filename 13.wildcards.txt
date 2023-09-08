@@ -1,0 +1,48 @@
+udemy course - wildcards
+
+-A wildcard is character or string used for pattern matching
+-globbing expands the wildcard pattern into a lit of files and or directories.
+-wildcards can be used with most commands.
+
+.ls
+.rm
+.cp
+
+1. *  -matches zero or more characters
+	a. *.txt
+	b. a*
+	c. a*.txt
+
+2. ?  -matches exactly one character.
+	a. ?.txt
+	b. a?
+	c. a?.txt
+
+3. [] -A character class
+matches any of the characters included between the brackets. 
+Matches exactly one character.
+ex:- [aeiou]
+     ca[nt]* :- can , cat , candy, catch
+
+4. [!] - matches any of the charactrs not included between the brackets.
+	matches exactly one character.
+	
+	ex:- [!aeiou]* :- baesball, cricket
+
+5. [a-g] / [0 -3] 
+	use two characters separated by hyphen to create a range in a character class.
+	[a-g]*  matches all files that start with a,b,c,d,e,f or g.
+	[3-6]* matches all files that start with 3,4,5,6
+
+6. Named character classes
+	[[:alpha:]]
+	[[:digit:]] - this will return files ended with digit
+	[[:digit:]]
+	[[:lower:]]
+	[[:space:]]
+	[[:upper:]]
+
+7. Matching wildcard patterns
+	\ - escape character. use if you want to match a wildcard character.
+	ex:- *\? :- match all files that end with a question mark
+
